@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <div class="dashboard admin">
+        <h1>Admin Panel</h1>
+        <h3>Registered Users</h3>
+
+        <ul>
+            {% for name, details in users.items() %}
+            <li>{{ name }} → {{ details.role }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/logout" class="btn">Logout</a>
+    </div>
+
+</body>
+
+</html>
